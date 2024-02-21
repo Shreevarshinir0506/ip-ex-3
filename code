@@ -1,0 +1,213 @@
+Home page:
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+              body{
+                background-image:url("img.jpg");
+                background-repeat: no-repeat;
+                background-size:100%;
+        }
+        h1{
+            font-size: 25px;
+            font-style: italic;
+            text-shadow: 2px 2px 4px;
+            color:cyan;
+        }
+        a{
+            color:aqua;
+        }
+       
+        p{
+            padding-top:10%;
+            font-size:40px;
+            width:80%;
+            
+            
+        }
+        #bookContainer {
+    position: fixed;
+    top: 50%; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    transform: translateY(-10%);
+    width: 200px;
+    overflow: hidden;
+    z-index: 999; /* Ensure the book container is above other content */
+  }
+     
+        #i{
+            position:fixed;
+            height:150px;
+            width:150px;
+            top: 50px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            z-index: 999; /* Ensure the image is above other content */
+            cursor: pointer; /* Show pointer cursor on hover */
+        }
+        #registrationFormContainer {
+    position: fixed;
+    top: 50px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: none; /* Initially hide the form */
+    z-index: 999; /* Ensure the form is above other content */
+  }
+        </style>
+        <title>
+            Library management system
+         </title>  
+    </head>
+ <body>
+    <center>
+        <h1> Queen library</h1>
+        <a  style="padding-left:80%" href="2.html">Signup</a> /
+        <a href="3.1.1.html">Login</a>
+        <a style="color:rgba(251, 255, 0, 0.555);font-size:20px;padding-right:5px;" href="2.1.html">Science Fiction/ </a>
+        <a style="color:rgba(251, 255, 0, 0.555);font-size:20px;padding-right:5px;" href="3.1.1.html">Fiction /</a>
+        <a style="color:rgba(251, 255, 0, 0.555);font-size:20px;padding-right:5px;" href="3.1.1.html">Mystery / Thriller</a>
+    </center>
+    <b><p>libraries democratize access to information, facilitate lifelong learning, and empower users to explore, discover, and engage with knowledge in innovative ways.</p></b>
+
+<b><p>
+    A digital library is a collection of digital resources accessible online. These resources can include e-books, academic papers, journals, multimedia content, databases, and other digital materials. Digital libraries provide users with the ability to access information remotely, often from anywhere with an internet connection. Here are some key points about digital libraries:
+    
+   <br> Accessibility: One of the primary advantages of digital libraries is their accessibility. Users can access digital library resources from anywhere with an internet connection, at any time, using various devices such as computers, tablets, or smartphones. This accessibility greatly expands the reach of the library, allowing users to access resources without the constraints of physical location or operating hours.
+    
+   <br> Content Diversity: Digital libraries offer a wide range of content types and formats. Users can find resources ranging from traditional text-based materials like e-books and academic papers to multimedia content such as videos, audio recordings, and interactive simulations. This diverse range of content caters to different learning styles and research needs.
+    
+    Search and Discovery: Digital libraries typically provide robust search and discovery tools to help users find relevant resources efficiently. Users can search by keywords, authors, subjects, or other metadata tags to locate specific items or explore related materials. Advanced search features may include filters, faceted search options, and relevance ranking algorithms to enhance the search experience.</p></b>
+
+
+        <img  id="i" src="image.jpg" alt="Description of the image" onclick="showRegistrationForm()" >
+    <div id="registrationFormContainer">
+        <!-- Your registration form goes here -->
+        <h2>Library Registration Form</h2>
+        <!-- Example form -->
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div id="bookContainer">
+        <img src="2.2.jpg" alt="Book 1">
+        <img src="2.3jpg" alt="Book 2">
+        <img src="2.4.jpg" alt="Book 3">
+      </div>
+<script>
+     function showRegistrationForm() {
+    var formContainer = document.getElementById("registrationFormContainer");
+    formContainer.style.display = "block";
+  }
+  var bookImages = document.querySelectorAll("#bookContainer img");
+  var currentIndex = 0;
+  setInterval(function() {
+    bookImages[currentIndex].style.opacity = 0;
+    currentIndex = (currentIndex + 1) % bookImages.length;
+    bookImages[currentIndex].style.opacity = 1;
+  }, 3000);
+</script>
+      
+ </body>
+</html>
+ Login page:
+<html>
+    <head>
+        <style>
+            body{
+                background-image:url(v.png);
+                background-size: cover;
+            }
+            form{
+                padding-top:170;
+                border:2px;
+                width:200;
+                text-align:justify;
+                font-size: 25px;
+            }
+            button{
+                    font-size:25px;
+                }
+            h1{
+                color:darkgreen;
+                text-shadow: 2px 2px 4px;
+            }
+            button{
+                background-color:#C1F2B0;
+            }
+        </style>
+    </head>
+    <body>
+    <center>
+
+         <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+        <form>
+           </b>username:<input type="text"><br>
+           password:<input type="password"><br>
+           <br>
+        <button>login</button>
+        </form>
+     </center>
+    </body>
+</html>
+Book page:
+<!DOCTYPE html>
+<html>
+    <head>
+     <title> books </title>
+     <style>
+        .y{
+            color:coral;
+            background-color:blanchedalmond;
+            height:40px;
+            padding-right:30%;
+        }
+        b{
+            font-size:30px;
+            padding-right:100%;
+        }
+        button{
+            margin:50px;
+            padding-right:80%;
+            width:70%;
+            height:30px;
+        }
+        .x{
+            display:inline-block;
+            border: 2px solid black;
+            width:300px;
+            height:300px;
+     }
+     .z{
+        width:180px;
+        height:180px;
+     }
+     h1{
+        color:rgb(194, 56, 56);
+        padding-left:50%;
+     }
+  
+     </style>
+    </head>
+    <body>
+        <div class="y"><b>books</b>Home|AboutUs|Contact|</div>
+    <button> Search </button>
+    <h1> Fiction </h1>
+    <center>
+    <div class="x">
+         <image src="2.2.jpg" class="z" > <h4>"The Great Gatsby" is a classic novel written by F. Scott Fitzgerald, the story follows the enigmatic millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan</h4></image>
+    </div>
+     <div class="x">
+         <image src="2.3.jpg" class="z"> <h4>"Pride and Prejudice" is a classic novel by Jane Austen, first published in 1813"Mr. Darcy, exploring themes of love, marriage, social class, and personal growth in Regency-era England..</h4></image>
+    </div>
+    <div class="x">
+        <image src="2.4.jpg" class="z"> <h4>"The Night Circus" is a captivating fantasy novel by Erin Morgenstern, published in 2011. It immerses readers in a magical world of dueling illusionists</h4></image>
+   </div>
+    </center>
+    <h1><b>AboutUs</b></h1>
+        </body>
+</html>
